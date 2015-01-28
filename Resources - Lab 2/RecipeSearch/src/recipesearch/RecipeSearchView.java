@@ -38,15 +38,15 @@ public class RecipeSearchView extends javax.swing.JFrame {
         priceLabel = new javax.swing.JLabel();
         timeText = new javax.swing.JTextField();
         priceText = new javax.swing.JTextField();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        easyDifficultyButton = new javax.swing.JToggleButton();
         jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton8 = new javax.swing.JToggleButton();
-        jToggleButton9 = new javax.swing.JToggleButton();
-        jToggleButton10 = new javax.swing.JToggleButton();
-        jToggleButton11 = new javax.swing.JToggleButton();
-        jToggleButton12 = new javax.swing.JToggleButton();
-        jToggleButton13 = new javax.swing.JToggleButton();
-        jToggleButton14 = new javax.swing.JToggleButton();
+        averageDifficultyButton = new javax.swing.JToggleButton();
+        hardDifficultyButton = new javax.swing.JToggleButton();
+        franceKitchenButton = new javax.swing.JToggleButton();
+        greeceKitchenButton = new javax.swing.JToggleButton();
+        africaKitchenButton = new javax.swing.JToggleButton();
+        indiaKitchenButton = new javax.swing.JToggleButton();
+        asiaKitchenButton = new javax.swing.JToggleButton();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
@@ -54,26 +54,26 @@ public class RecipeSearchView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("recipesearch/resources/RecipeSearch"); // NOI18N
         setTitle(bundle.getString("Application.title")); // NOI18N
-        setMaximumSize(new java.awt.Dimension(1024, 768));
-        setMinimumSize(new java.awt.Dimension(1024, 768));
+        setMaximumSize(new java.awt.Dimension(1300, 930));
+        setMinimumSize(new java.awt.Dimension(1300, 930));
         setName("applicationFrame"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1024, 768));
+        setPreferredSize(new java.awt.Dimension(1300, 930));
         setResizable(false);
 
         mainIngrGroup.add(meatToggleButton);
-        meatToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/cow.png"))); // NOI18N
+        meatToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/cow2.png"))); // NOI18N
         meatToggleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         mainIngrGroup.add(fishToggleButton);
-        fishToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/fish.png"))); // NOI18N
+        fishToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/fish2.png"))); // NOI18N
         fishToggleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         mainIngrGroup.add(chickenToggleButton);
-        chickenToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/chicken.png"))); // NOI18N
+        chickenToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/chicken2.png"))); // NOI18N
         chickenToggleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         mainIngrGroup.add(vegToggleButton);
-        vegToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/carrot.png"))); // NOI18N
+        vegToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/carrot4.png"))); // NOI18N
         vegToggleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         timeLabel.setFont(new java.awt.Font("Lucida Sans Typewriter", 0, 36)); // NOI18N
@@ -86,47 +86,44 @@ public class RecipeSearchView extends javax.swing.JFrame {
 
         priceText.setText("jTextField2");
 
-        difficultyGroup.add(jToggleButton1);
-        jToggleButton1.setText("jToggleButton1");
-        jToggleButton1.setPreferredSize(new java.awt.Dimension(216, 160));
+        difficultyGroup.add(easyDifficultyButton);
+        easyDifficultyButton.setText("jToggleButton1");
+        easyDifficultyButton.setPreferredSize(new java.awt.Dimension(216, 160));
 
         kitchenGroup.add(jToggleButton2);
-        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/sweden_flag_map.png"))); // NOI18N
-        jToggleButton2.setText("jToggleButton2");
+        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/sweden_flag_map2.png"))); // NOI18N
         jToggleButton2.setPreferredSize(new java.awt.Dimension(216, 160));
 
-        difficultyGroup.add(jToggleButton8);
-        jToggleButton8.setText("jToggleButton1");
-        jToggleButton8.setPreferredSize(new java.awt.Dimension(216, 160));
+        difficultyGroup.add(averageDifficultyButton);
+        averageDifficultyButton.setText("jToggleButton1");
+        averageDifficultyButton.setPreferredSize(new java.awt.Dimension(216, 160));
 
-        difficultyGroup.add(jToggleButton9);
-        jToggleButton9.setText("jToggleButton1");
-        jToggleButton9.setPreferredSize(new java.awt.Dimension(216, 160));
+        difficultyGroup.add(hardDifficultyButton);
+        hardDifficultyButton.setText("jToggleButton1");
+        hardDifficultyButton.setPreferredSize(new java.awt.Dimension(216, 160));
 
-        kitchenGroup.add(jToggleButton10);
-        jToggleButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/sweden_flag_map.png"))); // NOI18N
-        jToggleButton10.setText("jToggleButton2");
-        jToggleButton10.setPreferredSize(new java.awt.Dimension(216, 160));
+        kitchenGroup.add(franceKitchenButton);
+        franceKitchenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/france2.png"))); // NOI18N
+        franceKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
 
-        kitchenGroup.add(jToggleButton11);
-        jToggleButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/sweden_flag_map.png"))); // NOI18N
-        jToggleButton11.setText("jToggleButton2");
-        jToggleButton11.setPreferredSize(new java.awt.Dimension(216, 160));
+        kitchenGroup.add(greeceKitchenButton);
+        greeceKitchenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/greece2.png"))); // NOI18N
+        greeceKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
 
-        kitchenGroup.add(jToggleButton12);
-        jToggleButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/sweden_flag_map.png"))); // NOI18N
-        jToggleButton12.setText("jToggleButton2");
-        jToggleButton12.setPreferredSize(new java.awt.Dimension(216, 160));
+        kitchenGroup.add(africaKitchenButton);
+        africaKitchenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/africa2.png"))); // NOI18N
+        africaKitchenButton.setText("jToggleButton2");
+        africaKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
 
-        kitchenGroup.add(jToggleButton13);
-        jToggleButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/sweden_flag_map.png"))); // NOI18N
-        jToggleButton13.setText("jToggleButton2");
-        jToggleButton13.setPreferredSize(new java.awt.Dimension(216, 160));
+        kitchenGroup.add(indiaKitchenButton);
+        indiaKitchenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/india2.png"))); // NOI18N
+        indiaKitchenButton.setText("jToggleButton2");
+        indiaKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
 
-        kitchenGroup.add(jToggleButton14);
-        jToggleButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/sweden_flag_map.png"))); // NOI18N
-        jToggleButton14.setText("jToggleButton2");
-        jToggleButton14.setPreferredSize(new java.awt.Dimension(216, 160));
+        kitchenGroup.add(asiaKitchenButton);
+        asiaKitchenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/asia3.png"))); // NOI18N
+        asiaKitchenButton.setText("jToggleButton2");
+        asiaKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -138,9 +135,9 @@ public class RecipeSearchView extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButton10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(franceKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToggleButton11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(greeceKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(timeLabel)
@@ -162,17 +159,17 @@ public class RecipeSearchView extends javax.swing.JFrame {
                                         .addComponent(timeText))
                                     .addComponent(priceText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(easyDifficultyButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jToggleButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(averageDifficultyButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jToggleButton9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(hardDifficultyButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jToggleButton12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(africaKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jToggleButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(indiaKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jToggleButton14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(asiaKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -199,19 +196,19 @@ public class RecipeSearchView extends javax.swing.JFrame {
                     .addComponent(priceText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(easyDifficultyButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(averageDifficultyButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hardDifficultyButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(franceKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(greeceKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(africaKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(indiaKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(asiaKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -228,7 +225,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jScrollPane1)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -250,8 +247,11 @@ public class RecipeSearchView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -259,22 +259,22 @@ public class RecipeSearchView extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton africaKitchenButton;
+    private javax.swing.JToggleButton asiaKitchenButton;
+    private javax.swing.JToggleButton averageDifficultyButton;
     private javax.swing.JToggleButton chickenToggleButton;
     private javax.swing.ButtonGroup difficultyGroup;
+    private javax.swing.JToggleButton easyDifficultyButton;
     private javax.swing.JToggleButton fishToggleButton;
+    private javax.swing.JToggleButton franceKitchenButton;
+    private javax.swing.JToggleButton greeceKitchenButton;
+    private javax.swing.JToggleButton hardDifficultyButton;
+    private javax.swing.JToggleButton indiaKitchenButton;
     private javax.swing.JList jList1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton10;
-    private javax.swing.JToggleButton jToggleButton11;
-    private javax.swing.JToggleButton jToggleButton12;
-    private javax.swing.JToggleButton jToggleButton13;
-    private javax.swing.JToggleButton jToggleButton14;
     private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton8;
-    private javax.swing.JToggleButton jToggleButton9;
     private javax.swing.ButtonGroup kitchenGroup;
     private javax.swing.ButtonGroup mainIngrGroup;
     private javax.swing.JToggleButton meatToggleButton;
