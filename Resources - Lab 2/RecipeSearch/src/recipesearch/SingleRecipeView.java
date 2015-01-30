@@ -26,6 +26,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
     private String description;
     private List<Ingredient> ingredients;
     private Recipe r;
+    private String ingrList;
     
                 
     
@@ -38,12 +39,20 @@ public class SingleRecipeView extends javax.swing.JFrame {
         initComponents();
         this.singleRecipeImage.setIcon((r.getImage()));
         this.singleRecipeTitle.setText(r.getName());
-        this.singleRecipeServings.setText(((Integer)r.getServings()).toString());
-        this.singleRecipePrice.setText(((Integer)r.getPrice()).toString()); 
+        this.singleRecipeServingsData.setText(((Integer)r.getServings()).toString());
+        this.singleRecipePriceData.setText(((Integer)r.getPrice()).toString());
+        this.singleRecipeTimeData.setText(((Integer)r.getTime()).toString());
         for (Ingredient i : r.getIngredients()){
-            this.singleRecipeIngrList.add(new javax.swing.JLabel(i.getName()+"    "+i.getAmount()+" "+i.getUnit()));
+            if (ingrList == null){
+                ingrList = "<html>"+"<body>"+i.toString();         
+            }
+            else{
+                ingrList = ingrList + "<br />"+i.toString();
+            }  
         }
-        this.singeRecipeDesc.setText(r.getDescription());
+        ingrList = ingrList+"</body>"+"</html>";
+        this.singleRecipeIngrData.setText(ingrList);
+        this.singeRecipeDescData.setText(r.getDescription());
     }
 
     /**
@@ -60,14 +69,14 @@ public class SingleRecipeView extends javax.swing.JFrame {
         singleRecipeServings = new javax.swing.JLabel();
         singleRecipeTime = new javax.swing.JLabel();
         singleRecipePrice = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        singleRecipeServingsData = new javax.swing.JLabel();
+        singleRecipeTimeData = new javax.swing.JLabel();
+        singleRecipePriceData = new javax.swing.JLabel();
         singleRecipeImage = new javax.swing.JLabel();
-        singleRecipeIngr = new javax.swing.JScrollPane();
-        singleRecipeIngrList = new javax.swing.JList();
         singleRecipeDescPanel = new javax.swing.JPanel();
-        singeRecipeDesc = new javax.swing.JLabel();
+        singeRecipeDescData = new javax.swing.JLabel();
+        singleRecipeIngrPanel = new javax.swing.JPanel();
+        singleRecipeIngrData = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(241, 241, 241));
@@ -82,11 +91,11 @@ public class SingleRecipeView extends javax.swing.JFrame {
 
         singleRecipePrice.setText("Pris:");
 
-        jLabel1.setText("jLabel1");
+        singleRecipeServingsData.setText("jLabel1");
 
-        jLabel2.setText("jLabel2");
+        singleRecipeTimeData.setText("jLabel2");
 
-        jLabel3.setText("jLabel3");
+        singleRecipePriceData.setText("jLabel3");
 
         javax.swing.GroupLayout singleRecipeShortLayout = new javax.swing.GroupLayout(singleRecipeShort);
         singleRecipeShort.setLayout(singleRecipeShortLayout);
@@ -103,9 +112,9 @@ public class SingleRecipeView extends javax.swing.JFrame {
                             .addComponent(singleRecipePrice))
                         .addGap(33, 33, 33)
                         .addGroup(singleRecipeShortLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
+                            .addComponent(singleRecipePriceData)
+                            .addComponent(singleRecipeTimeData)
+                            .addComponent(singleRecipeServingsData))
                         .addGap(0, 335, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -117,28 +126,21 @@ public class SingleRecipeView extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(singleRecipeShortLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(singleRecipeServings)
-                    .addComponent(jLabel1))
+                    .addComponent(singleRecipeServingsData))
                 .addGap(18, 18, 18)
                 .addGroup(singleRecipeShortLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(singleRecipeTime)
-                    .addComponent(jLabel2))
+                    .addComponent(singleRecipeTimeData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(singleRecipeShortLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(singleRecipePrice)
-                    .addComponent(jLabel3))
+                    .addComponent(singleRecipePriceData))
                 .addGap(53, 53, 53))
         );
 
-        singleRecipeIngrList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        singleRecipeIngr.setViewportView(singleRecipeIngrList);
-
         singleRecipeDescPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        singeRecipeDesc.setText("jLabel4");
+        singeRecipeDescData.setText("jLabel4");
 
         javax.swing.GroupLayout singleRecipeDescPanelLayout = new javax.swing.GroupLayout(singleRecipeDescPanel);
         singleRecipeDescPanel.setLayout(singleRecipeDescPanelLayout);
@@ -146,14 +148,35 @@ public class SingleRecipeView extends javax.swing.JFrame {
             singleRecipeDescPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(singleRecipeDescPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(singeRecipeDesc)
+                .addComponent(singeRecipeDescData)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         singleRecipeDescPanelLayout.setVerticalGroup(
             singleRecipeDescPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(singleRecipeDescPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(singeRecipeDesc)
+                .addComponent(singeRecipeDescData)
+                .addContainerGap(307, Short.MAX_VALUE))
+        );
+
+        singleRecipeIngrPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        singleRecipeIngrData.setText("jLabel1");
+
+        javax.swing.GroupLayout singleRecipeIngrPanelLayout = new javax.swing.GroupLayout(singleRecipeIngrPanel);
+        singleRecipeIngrPanel.setLayout(singleRecipeIngrPanelLayout);
+        singleRecipeIngrPanelLayout.setHorizontalGroup(
+            singleRecipeIngrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(singleRecipeIngrPanelLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(singleRecipeIngrData)
+                .addContainerGap(175, Short.MAX_VALUE))
+        );
+        singleRecipeIngrPanelLayout.setVerticalGroup(
+            singleRecipeIngrPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(singleRecipeIngrPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(singleRecipeIngrData)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -162,14 +185,15 @@ public class SingleRecipeView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(234, Short.MAX_VALUE)
                         .addComponent(singleRecipeImage)
                         .addGap(31, 31, 31))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(singleRecipeIngr, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(singleRecipeIngrPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(singleRecipeShort, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(singleRecipeDescPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -185,7 +209,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(singleRecipeDescPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(singleRecipeIngr, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE))
+                    .addComponent(singleRecipeIngrPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31))
         );
 
@@ -232,18 +256,18 @@ public class SingleRecipeView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel singeRecipeDesc;
+    private javax.swing.JLabel singeRecipeDescData;
     private javax.swing.JPanel singleRecipeDescPanel;
     private javax.swing.JLabel singleRecipeImage;
-    private javax.swing.JScrollPane singleRecipeIngr;
-    private javax.swing.JList singleRecipeIngrList;
+    private javax.swing.JLabel singleRecipeIngrData;
+    private javax.swing.JPanel singleRecipeIngrPanel;
     private javax.swing.JLabel singleRecipePrice;
+    private javax.swing.JLabel singleRecipePriceData;
     private javax.swing.JLabel singleRecipeServings;
+    private javax.swing.JLabel singleRecipeServingsData;
     private javax.swing.JPanel singleRecipeShort;
     private javax.swing.JLabel singleRecipeTime;
+    private javax.swing.JLabel singleRecipeTimeData;
     private javax.swing.JLabel singleRecipeTitle;
     // End of variables declaration//GEN-END:variables
 }
