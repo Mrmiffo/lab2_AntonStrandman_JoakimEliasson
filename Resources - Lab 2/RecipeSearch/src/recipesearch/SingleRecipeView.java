@@ -37,7 +37,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
     public SingleRecipeView(Recipe r) {
         
         initComponents();
-        this.singleRecipeImage.setIcon((r.getImage()));
+      //  this.singleRecipeImage.setIcon((r.getImage()));
         this.singleRecipeTitle.setText(r.getName());
         this.singleRecipeServingsData.setText(((Integer)r.getServings()).toString());
         this.singleRecipePriceData.setText(((Integer)r.getPrice()).toString());
