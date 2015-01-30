@@ -42,7 +42,6 @@ public class SingleRecipeView extends javax.swing.JFrame {
             this.singleRecipeIngrList.add(new javax.swing.JLabel(i.getName()+"    "+i.getAmount()+" "+i.getUnit()));
         }
         this.singeRecipeDesc.setText(r.getDescription());
-        
     }
 
     /**
