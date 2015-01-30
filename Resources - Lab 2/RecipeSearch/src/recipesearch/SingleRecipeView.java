@@ -9,6 +9,8 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import se.chalmers.ait.dat215.lab2.Ingredient;
 import se.chalmers.ait.dat215.lab2.Recipe;
+import se.chalmers.ait.dat215.lab2.RecipeDatabase;
+import se.chalmers.ait.dat215.lab2.SearchFilter;
 
 
 /**
@@ -23,7 +25,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
     private ImageIcon image;
     private String description;
     private List<Ingredient> ingredients;
-    private static Recipe r;
+    private Recipe r;
     
                 
     
@@ -69,7 +71,6 @@ public class SingleRecipeView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(241, 241, 241));
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         singleRecipeShort.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -105,7 +106,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1))
-                        .addGap(0, 361, Short.MAX_VALUE)))
+                        .addGap(0, 335, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         singleRecipeShortLayout.setVerticalGroup(
@@ -125,7 +126,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
                 .addGroup(singleRecipeShortLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(singleRecipePrice)
                     .addComponent(jLabel3))
-                .addGap(50, 50, 50))
+                .addGap(53, 53, 53))
         );
 
         singleRecipeIngrList.setModel(new javax.swing.AbstractListModel() {
@@ -134,6 +135,8 @@ public class SingleRecipeView extends javax.swing.JFrame {
             public Object getElementAt(int i) { return strings[i]; }
         });
         singleRecipeIngr.setViewportView(singleRecipeIngrList);
+
+        singleRecipeDescPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         singeRecipeDesc.setText("jLabel4");
 
@@ -159,17 +162,17 @@ public class SingleRecipeView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 179, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(singleRecipeImage)
-                        .addGap(48, 48, 48)
-                        .addComponent(singleRecipeShort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(singleRecipeIngr, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(singleRecipeDescPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(singleRecipeShort, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(singleRecipeDescPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -179,10 +182,10 @@ public class SingleRecipeView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(singleRecipeShort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(singleRecipeImage))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(singleRecipeIngr, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
-                    .addComponent(singleRecipeDescPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(singleRecipeDescPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(singleRecipeIngr, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE))
                 .addGap(31, 31, 31))
         );
 
@@ -218,9 +221,13 @@ public class SingleRecipeView extends javax.swing.JFrame {
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SingleRecipeView(r).setVisible(true);
-            }
+            
+                public void run() {
+                    RecipeDatabase db = RecipeDatabase.getSharedInstance();
+                    List <Recipe> listRecipe = db.search(new SearchFilter("Svår", 30, "Grekland", 150, "Kött"));
+                    new SingleRecipeView(listRecipe.get(0)).setVisible(true);  
+                }
+            
         });
     }
 
