@@ -46,6 +46,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -67,7 +68,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="timeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="priceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -113,60 +114,66 @@
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel5" max="32767" attributes="0"/>
+                  <Component id="scrollPane1" min="-2" pref="500" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jPanel5" alignment="1" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="vegToggleButton" min="-2" pref="160" max="-2" attributes="0"/>
-                      <Component id="chickenToggleButton" min="-2" pref="160" max="-2" attributes="0"/>
-                      <Component id="fishToggleButton" min="-2" pref="160" max="-2" attributes="0"/>
-                      <Component id="meatToggleButton" min="-2" pref="160" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="timeLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="timeText" max="32767" attributes="0"/>
-                      <Component id="timeSlider" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="priceLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="priceText" max="32767" attributes="0"/>
-                      <Component id="priceSlider" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="easyDifficultyButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="averageDifficultyButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="hardDifficultyButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Component id="scrollPane1" alignment="0" min="-2" pref="939" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="franceKitchenButton" min="-2" max="-2" attributes="0"/>
-                              <Component id="swedenKitchenButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="vegToggleButton" min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="chickenToggleButton" min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="fishToggleButton" min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="meatToggleButton" min="-2" pref="160" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="timeLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="timeText" max="32767" attributes="0"/>
+                              <Component id="timeSlider" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="priceLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="priceText" max="32767" attributes="0"/>
+                              <Component id="priceSlider" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="africaKitchenButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="indiaKitchenButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="asiaKitchenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="easyDifficultyButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="averageDifficultyButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="hardDifficultyButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="franceKitchenButton" min="-2" max="-2" attributes="0"/>
+                                      <Component id="swedenKitchenButton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="africaKitchenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="indiaKitchenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="asiaKitchenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="greeceKitchenButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="greeceKitchenButton" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
-              <Component id="jPanel5" alignment="1" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -185,6 +192,9 @@
               <Color id="Standardmark&#xf6;r"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mainIngrAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="fishToggleButton">
           <Properties>
@@ -200,6 +210,9 @@
               <Color id="Standardmark&#xf6;r"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mainIngrAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="chickenToggleButton">
           <Properties>
@@ -215,6 +228,9 @@
               <Color id="Standardmark&#xf6;r"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mainIngrAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="vegToggleButton">
           <Properties>
@@ -230,6 +246,9 @@
               <Color id="Standardmark&#xf6;r"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mainIngrAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSlider" name="timeSlider">
           <Properties>
@@ -254,6 +273,9 @@
             <Property name="snapToTicks" type="boolean" value="true"/>
             <Property name="value" type="int" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="priceSliderStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="timeLabel">
           <Properties>
@@ -274,7 +296,13 @@
         <Component class="javax.swing.JTextField" name="priceText">
           <Properties>
             <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new integerInputVerifier()" type="code"/>
+            </Property>
           </Properties>
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="priceTextFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="easyDifficultyButton">
           <Properties>
@@ -288,7 +316,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="easyDifficultyButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="difficultyAction"/>
           </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="swedenKitchenButton">
@@ -305,6 +333,9 @@
               <Dimension value="[216, 160]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cusineAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="averageDifficultyButton">
           <Properties>
@@ -317,7 +348,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="averageDifficultyButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="difficultyAction"/>
           </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="hardDifficultyButton">
@@ -331,6 +362,9 @@
               <Dimension value="[216, 160]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="difficultyAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="franceKitchenButton">
           <Properties>
@@ -346,6 +380,9 @@
               <Dimension value="[216, 160]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cusineAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="greeceKitchenButton">
           <Properties>
@@ -362,7 +399,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="greeceKitchenButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cusineAction"/>
           </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="africaKitchenButton">
@@ -380,6 +417,9 @@
               <Dimension value="[216, 160]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cusineAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="indiaKitchenButton">
           <Properties>
@@ -396,6 +436,9 @@
               <Dimension value="[216, 160]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cusineAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="asiaKitchenButton">
           <Properties>
@@ -412,6 +455,9 @@
               <Dimension value="[216, 160]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cusineAction"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="timeText">
           <Properties>
@@ -421,7 +467,6 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeTextActionPerformed"/>
             <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="timeTextFocusLost"/>
           </Events>
         </Component>
@@ -430,47 +475,22 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="621" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jScrollPane1" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
-          <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
+        </Container>
+        <Container class="java.awt.ScrollPane" name="scrollPane1">
 
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JList" name="resultList">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                      <StringArray count="5">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
-                        <StringItem index="4" value="Item 5"/>
-                      </StringArray>
-                    </Property>
-                    <Property name="selectionMode" type="int" value="0"/>
-                    <Property name="toolTipText" type="java.lang.String" value=""/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.ScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="java.awt.List" name="resultList">
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
