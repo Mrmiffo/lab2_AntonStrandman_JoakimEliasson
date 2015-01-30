@@ -75,7 +75,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="easyDifficultyButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="averageDifficultyButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="easyDifficultyButton1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="hardDifficultyButton" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -151,12 +151,12 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="easyDifficultyButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="averageDifficultyButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="hardDifficultyButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="easyDifficultyButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="franceKitchenButton" min="-2" max="-2" attributes="0"/>
                                       <Component id="swedenKitchenButton" min="-2" max="-2" attributes="0"/>
@@ -172,7 +172,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -337,20 +337,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cusineAction"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JToggleButton" name="averageDifficultyButton">
-          <Properties>
-            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="difficultyGroup"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Mellan"/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[216, 160]"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="difficultyAction"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JToggleButton" name="hardDifficultyButton">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
@@ -493,6 +479,21 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JToggleButton" name="easyDifficultyButton1">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="difficultyGroup"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Medelsv&#xe5;rt"/>
+            <Property name="actionCommand" type="java.lang.String" value="Mellan"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[216, 160]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="difficultyAction"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
