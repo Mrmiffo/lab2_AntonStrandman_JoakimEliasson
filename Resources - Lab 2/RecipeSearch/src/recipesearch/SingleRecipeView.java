@@ -53,6 +53,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
         ingrList = ingrList+"</body>"+"</html>";
         this.singleRecipeIngrData.setText(ingrList);
         this.singeRecipeDescData.setText(r.getDescription());
+        this.setVisible(true);
     }
 
     /**
