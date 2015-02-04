@@ -13,10 +13,10 @@ import javax.swing.JList;
 import se.chalmers.ait.dat215.lab2.Recipe;
 
 /**
- *
+ *This class is used by the recipe viewer to create a result list with customized layout.
  * @author Anton
  */
-public class RecipeList extends DefaultListCellRenderer{
+public final class RecipeList extends DefaultListCellRenderer{
     @Override
     public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
         Font font = new Font("helvetica", Font.BOLD,24);
@@ -28,7 +28,7 @@ public class RecipeList extends DefaultListCellRenderer{
         label.setText(((Recipe)value).getName());
         label.setFont(font);
 
-        
+        //Used to add rowbreaks after each ingridient in the tooltip.
         String toolTip = "<html><body>"+((Recipe)value).getIngredients().get(0);
         for (int i = 1;i< ((Recipe)value).getIngredients().size();i++){
             toolTip = toolTip + "<br>" + ((Recipe)value).getIngredients().get(i);
