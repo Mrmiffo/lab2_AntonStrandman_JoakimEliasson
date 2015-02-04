@@ -7,7 +7,10 @@ package recipesearch;
 
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import javax.swing.DefaultListCellRenderer;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import se.chalmers.ait.dat215.lab2.Recipe;
@@ -33,7 +36,7 @@ public final class RecipeList extends DefaultListCellRenderer{
         for (int i = 1;i< ((Recipe)value).getIngredients().size();i++){
             toolTip = toolTip + "<br>" + ((Recipe)value).getIngredients().get(i);
         }
-        label.setToolTipText(toolTip);
+        label.setToolTipText(toolTip+"</body></html>");
         return label;
     }
     
