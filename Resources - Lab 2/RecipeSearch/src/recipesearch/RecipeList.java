@@ -19,7 +19,7 @@ import se.chalmers.ait.dat215.lab2.Recipe;
 public final class RecipeList extends DefaultListCellRenderer{
     @Override
     public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-        Font font = new Font("helvetica", Font.BOLD,24);
+        Font font = new Font("Tahoma", Font.BOLD,24);
         JLabel label;
         
         label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
@@ -29,7 +29,7 @@ public final class RecipeList extends DefaultListCellRenderer{
         label.setFont(font);
 
         //Used to add rowbreaks after each ingridient in the tooltip.
-        String toolTip = "<html><body>"+((Recipe)value).getIngredients().get(0);
+        String toolTip = "<html><body><b>"+((Recipe)value).getName()+"</b><br>"+((Recipe)value).getIngredients().get(0);
         for (int i = 1;i< ((Recipe)value).getIngredients().size();i++){
             toolTip = toolTip + "<br>" + ((Recipe)value).getIngredients().get(i);
         }
