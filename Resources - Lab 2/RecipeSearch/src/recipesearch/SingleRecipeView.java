@@ -12,6 +12,7 @@ import se.chalmers.ait.dat215.lab2.Recipe;
 import se.chalmers.ait.dat215.lab2.RecipeDatabase;
 import se.chalmers.ait.dat215.lab2.SearchFilter;
 import java.awt.Dimension;
+import java.awt.image.BufferedImage;
 
 /**
  *
@@ -27,6 +28,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
     private List<Ingredient> ingredients;
     private Recipe r;
     private String ingrList;
+    private static int NbrOfWindows;
     
                 
     
@@ -35,8 +37,10 @@ public class SingleRecipeView extends javax.swing.JFrame {
      * Creates new form SingleRecipeView
      */
     public SingleRecipeView(Recipe r) {
-        
         initComponents();
+        this.setIconImage( new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB));
+        this.setLocation(NbrOfWindows*40,NbrOfWindows*40);
+        NbrOfWindows = (NbrOfWindows+1)%20;
         this.singleRecipeImage.setIcon((r.getImage(234,234)));
         this.singleRecipeTitle.setText(r.getName());
         this.singleRecipeServingsData.setText(((Integer)r.getServings()).toString()+" st");
@@ -89,6 +93,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setBackground(new java.awt.Color(241, 241, 241));
         setResizable(false);
 

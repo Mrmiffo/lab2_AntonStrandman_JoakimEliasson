@@ -1,5 +1,6 @@
 package recipesearch;
 
+import java.awt.image.BufferedImage;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Event;
@@ -34,6 +35,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         search = new RecipeSearchController();
         
         initComponents();
+        this.setIconImage( new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB));
         resultList.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 if (e.getClickCount() == 2){
