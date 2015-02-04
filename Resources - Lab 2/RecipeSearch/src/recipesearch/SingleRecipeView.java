@@ -23,12 +23,13 @@ public class SingleRecipeView extends javax.swing.JFrame {
     private String name;
     private int servings;
     private int price;
-    private ImageIcon image;
+    
     private String description;
     private List<Ingredient> ingredients;
     private Recipe r;
     private String ingrList;
     private static int NbrOfWindows;
+    
     
                 
     
@@ -38,7 +39,10 @@ public class SingleRecipeView extends javax.swing.JFrame {
      */
     public SingleRecipeView(Recipe r) {
         initComponents();
-        this.setIconImage( new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB));
+        ImageIcon frameIcon = new ImageIcon(
+        getClass().getResource("/RecipeSearch/resources/img.png"));
+    
+        setIconImage(frameIcon.getImage());
         this.setLocation(NbrOfWindows*40,NbrOfWindows*40);
         NbrOfWindows = (NbrOfWindows+1)%20;
         this.singleRecipeImage.setIcon((r.getImage(234,234)));
@@ -114,7 +118,7 @@ public class SingleRecipeView extends javax.swing.JFrame {
 
         singleRecipePrice.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         singleRecipePrice.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        singleRecipePrice.setText("Estimerat pris:");
+        singleRecipePrice.setText("Beräknat pris:");
 
         singleRecipeServingsData.setText("jLabel1");
 

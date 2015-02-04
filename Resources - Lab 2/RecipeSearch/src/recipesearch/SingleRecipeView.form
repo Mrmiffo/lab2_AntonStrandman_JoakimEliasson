@@ -177,7 +177,7 @@
               <Font name="Tahoma" size="16" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Estimerat pris:"/>
+            <Property name="text" type="java.lang.String" value="Ber&#xe4;knat pris:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="singleRecipeServingsData">

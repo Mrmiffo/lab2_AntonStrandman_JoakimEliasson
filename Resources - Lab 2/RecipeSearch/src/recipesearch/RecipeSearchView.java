@@ -8,6 +8,7 @@ import java.awt.event.MouseEvent;
 import java.util.List;
 import javax.swing.ButtonModel;
 import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 import javax.swing.JList;
 import javax.swing.JToggleButton;
 import se.chalmers.ait.dat215.lab2.Recipe;
@@ -28,7 +29,10 @@ public class RecipeSearchView extends javax.swing.JFrame {
         search = new RecipeSearchController();
         
         initComponents();
-        this.setIconImage( new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB));
+        ImageIcon frameIcon = new ImageIcon(
+        getClass().getResource("/RecipeSearch/resources/img.png"));
+    
+        setIconImage(frameIcon.getImage());
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         resultList.addMouseListener(new MouseAdapter(){
