@@ -3,6 +3,7 @@ package recipesearch;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Event;
+import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -34,6 +35,8 @@ public class RecipeSearchView extends javax.swing.JFrame {
         search = new RecipeSearchController();
         
         initComponents();
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         resultList.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e){
                 if (e.getClickCount() == 2){
