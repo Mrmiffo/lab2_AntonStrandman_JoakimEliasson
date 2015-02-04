@@ -151,7 +151,9 @@ public class RecipeSearchView extends javax.swing.JFrame {
         setMaximumSize(null);
         setMinimumSize(null);
         setName("applicationFrame"); // NOI18N
+        setResizable(false);
 
+        layoutPanel.setBackground(new java.awt.Color(244, 244, 192));
         layoutPanel.setMaximumSize(null);
 
         mainIngrGroup.add(meatToggleButton);
@@ -346,8 +348,9 @@ public class RecipeSearchView extends javax.swing.JFrame {
 
         jScrollPane1.setMaximumSize(null);
         jScrollPane1.setMinimumSize(null);
-        jScrollPane1.setPreferredSize(new Dimension((int)(layoutPanel.getSize().getWidth()*0.4),(int)(layoutPanel.getSize().getHeight()-10)));
+        jScrollPane1.setPreferredSize(new Dimension((int)(layoutPanel.getSize().getWidth()*0.5),(int)(layoutPanel.getSize().getHeight()-10)));
 
+        resultList.setBackground(new java.awt.Color(244, 244, 192));
         resultList.setModel(listModel);
         resultList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         resultList.setToolTipText("");
@@ -397,8 +400,8 @@ public class RecipeSearchView extends javax.swing.JFrame {
                             .addComponent(priceText)
                             .addComponent(timeText))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(220, 220, 220))
         );
@@ -447,7 +450,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
                                     .addComponent(indiaKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(asiaKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(greeceKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 5, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -455,10 +458,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(layoutPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(layoutPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1134, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
