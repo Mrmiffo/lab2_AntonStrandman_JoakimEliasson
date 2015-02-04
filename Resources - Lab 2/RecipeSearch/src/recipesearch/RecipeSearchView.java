@@ -153,7 +153,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         setName("applicationFrame"); // NOI18N
         setResizable(false);
 
-        layoutPanel.setBackground(new java.awt.Color(244, 244, 192));
+        layoutPanel.setBackground(new java.awt.Color(255, 255, 255));
         layoutPanel.setMaximumSize(null);
 
         mainIngrGroup.add(meatToggleButton);
@@ -350,7 +350,6 @@ public class RecipeSearchView extends javax.swing.JFrame {
         jScrollPane1.setMinimumSize(null);
         jScrollPane1.setPreferredSize(new Dimension((int)(layoutPanel.getSize().getWidth()*0.5),(int)(layoutPanel.getSize().getHeight()-10)));
 
-        resultList.setBackground(new java.awt.Color(244, 244, 192));
         resultList.setModel(listModel);
         resultList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         resultList.setToolTipText("");
