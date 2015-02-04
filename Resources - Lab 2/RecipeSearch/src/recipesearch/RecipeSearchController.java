@@ -5,6 +5,7 @@
  */
 package recipesearch;
 
+import java.util.ArrayList;
 import java.util.List;
 import se.chalmers.ait.dat215.lab2.Recipe;
 import se.chalmers.ait.dat215.lab2.RecipeDatabase;
@@ -22,6 +23,15 @@ public class RecipeSearchController{
     }
     
     public List<Recipe> getResults(SearchFilter filter){
-        return db.search(filter);
+        List<Recipe> temp = db.search(filter);
+        List<Recipe> result = new ArrayList<Recipe>();
+        for (Recipe r: temp){
+            if (((r.getCuisine().equals(filter.getCuisine()) || filter.getCuisine() == null) && (r.getMainIngredient().equals(filter.getMainIngredient()) || filter.getMainIngredient() == null) && (r.getPrice() < filter.getMaxPrice() || filter.getMaxPrice() == 0) && (r.getTime() < filter.getMaxTime() || filter.getMaxTime() == 0))){
+                if (filter.getDifficulty() == null || r.getDifficulty().equals(filter.getDifficulty()) || r.getDifficulty().equals("Lätt") || (r.getDifficulty().equals("Mellan") && filter.getDifficulty().equals("Svår"))){
+                    result.add(r);
+                }
+            }
+        }
+        return result;
     }
 }

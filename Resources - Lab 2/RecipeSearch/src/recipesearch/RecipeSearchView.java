@@ -47,7 +47,6 @@ public class RecipeSearchView extends javax.swing.JFrame {
 
     //Osäker på om vi vill skapa filter i viewern, eller om vi ska delegera det till RecipeSeachController. (View har all info, men ska ju egentligen inte göra den typen av beräkningar kan jag tycka)
     private SearchFilter createFilter(){
-        System.out.println("Difficulty: " + getDifficulty() + " MaxTime: " + getMaxTime() +  "Cusine: " + getCuisine() + " MaxPrice: " + getMaxPrice() + " Main Ingr: " + getMainIngredient());
         return new SearchFilter(getDifficulty(), getMaxTime(), getCuisine(), getMaxPrice(), getMainIngredient());
     }
 
@@ -144,6 +143,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         easyDifficultyButton1 = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         resultList = new javax.swing.JList();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("recipesearch/resources/RecipeSearch"); // NOI18N
@@ -405,6 +405,8 @@ public class RecipeSearchView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(220, 220, 220)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -450,6 +452,10 @@ public class RecipeSearchView extends javax.swing.JFrame {
                                     .addComponent(asiaKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(greeceKitchenButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(21, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -511,6 +517,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
     private javax.swing.ButtonGroup difficultyGroup;
     private javax.swing.JToggleButton easyDifficultyButton;
     private javax.swing.JToggleButton easyDifficultyButton1;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JToggleButton fishToggleButton;
     private javax.swing.JToggleButton franceKitchenButton;
     private javax.swing.JToggleButton greeceKitchenButton;
