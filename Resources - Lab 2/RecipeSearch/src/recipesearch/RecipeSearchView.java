@@ -214,7 +214,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         mainIngrGroup.add(vegToggleButton);
         vegToggleButton.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         vegToggleButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/carrot5.png"))); // NOI18N
-        vegToggleButton.setText("Vegetariskarätter");
+        vegToggleButton.setText("Vegetariska rätter");
         vegToggleButton.setToolTipText("Vegetariskt");
         vegToggleButton.setActionCommand("Vegetarisk");
         vegToggleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

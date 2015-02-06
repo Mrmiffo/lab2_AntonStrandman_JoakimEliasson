@@ -308,7 +308,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/recipesearch/resources/carrot5.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Vegetariskar&#xe4;tter"/>
+            <Property name="text" type="java.lang.String" value="Vegetariska r&#xe4;tter"/>
             <Property name="toolTipText" type="java.lang.String" value="Vegetariskt"/>
             <Property name="actionCommand" type="java.lang.String" value="Vegetarisk"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
