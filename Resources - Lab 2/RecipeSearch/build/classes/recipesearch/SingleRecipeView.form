@@ -95,13 +95,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="singleRecipeTitle" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="singleRecipeServings" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="singleRecipePrice" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="singleRecipeTime" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Component id="singleRecipeDifficulty" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="singleRecipeServings" alignment="0" max="32767" attributes="0"/>
+                              <Component id="singleRecipePrice" alignment="0" max="32767" attributes="0"/>
+                              <Component id="singleRecipeTime" alignment="0" max="32767" attributes="0"/>
+                              <Component id="singleRecipeDifficulty" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -110,7 +108,7 @@
                               <Component id="singleRecipeTimeData" min="-2" max="-2" attributes="0"/>
                               <Component id="singleRecipeServingsData" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="220" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="137" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -141,7 +139,7 @@
                       <Component id="singleRecipeDifficulty" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="singleRecipeDifficultyData" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="41" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -153,7 +151,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="24" style="1"/>
+              <Font name="Tahoma" size="30" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="Titel"/>
@@ -162,7 +160,7 @@
         <Component class="javax.swing.JLabel" name="singleRecipeServings">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="16" style="1"/>
+              <Font name="Tahoma" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Antal portioner:"/>
           </Properties>
@@ -170,7 +168,7 @@
         <Component class="javax.swing.JLabel" name="singleRecipeTime">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="16" style="1"/>
+              <Font name="Tahoma" size="24" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Ber&#xe4;knad tid:"/>
@@ -179,7 +177,7 @@
         <Component class="javax.swing.JLabel" name="singleRecipePrice">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="16" style="1"/>
+              <Font name="Tahoma" size="24" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Ber&#xe4;knat pris:"/>
@@ -187,23 +185,32 @@
         </Component>
         <Component class="javax.swing.JLabel" name="singleRecipeServingsData">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="singleRecipeTimeData">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="singleRecipePriceData">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="singleRecipeDifficulty">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="16" style="1"/>
+              <Font name="Tahoma" size="24" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Sv&#xe5;righet:"/>
@@ -211,6 +218,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="singleRecipeDifficultyData">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
@@ -249,43 +259,92 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="singleRecipeDescTitle" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="singleRecipeDescTitle" pref="417" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                       <Group type="102" attributes="0">
-                          <Component id="singleRecipeDescData" min="-2" pref="427" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jScrollPane2" pref="408" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   <Component id="singleRecipeDescTitle" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="singleRecipeDescData" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="267" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="singleRecipeDescData">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel4"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="singleRecipeDescTitle">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="24" style="1"/>
+              <Font name="Tahoma" size="30" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="G&#xf6;r s&#xe5; h&#xe4;r:"/>
           </Properties>
         </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <Properties>
+            <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+          </Properties>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="380" max="32767" attributes="0"/>
+                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                          <Component id="singleRecipeDescData" alignment="0" pref="380" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="293" max="32767" attributes="0"/>
+                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="singleRecipeDescData" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="264" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="singleRecipeDescData">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="24" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="jLabel4"/>
+                    <Property name="verticalTextPosition" type="int" value="1"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="singleRecipeIngrPanel">
@@ -318,7 +377,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="singleRecipeIngrData" alignment="0" max="32767" attributes="0"/>
-                      <Component id="singleRecipeIngrTitle" alignment="1" pref="202" max="32767" attributes="0"/>
+                      <Component id="singleRecipeIngrTitle" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -331,7 +390,7 @@
                   <Component id="singleRecipeIngrTitle" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="singleRecipeIngrData" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="267" max="32767" attributes="0"/>
+                  <EmptySpace pref="250" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -339,13 +398,16 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="singleRecipeIngrData">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="singleRecipeIngrTitle">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="24" style="1"/>
+              <Font name="Tahoma" size="30" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="text" type="java.lang.String" value="Ingredienser:"/>
