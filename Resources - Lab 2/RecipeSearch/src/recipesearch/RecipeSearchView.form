@@ -76,19 +76,14 @@
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="meatToggleButton" pref="179" max="32767" attributes="0"/>
+                          <Component id="meatToggleButton" pref="189" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                          <Component id="fishToggleButton" pref="195" max="32767" attributes="0"/>
+                          <Component id="fishToggleButton" pref="189" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="chickenToggleButton" pref="195" max="32767" attributes="0"/>
+                          <Component id="chickenToggleButton" pref="191" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                           <Component id="vegToggleButton" pref="195" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="filler1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -98,7 +93,11 @@
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="filler1" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="africaKitchenButton" max="32767" attributes="0"/>
@@ -141,7 +140,7 @@
                       <Component id="resetButton" pref="589" max="32767" attributes="0"/>
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -150,66 +149,56 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="chickenToggleButton" alignment="0" pref="179" max="32767" attributes="0"/>
-                              <Component id="fishToggleButton" max="32767" attributes="0"/>
-                              <Component id="meatToggleButton" max="32767" attributes="0"/>
-                              <Component id="vegToggleButton" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="resetButton" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="chickenToggleButton" alignment="0" min="-2" pref="197" max="-2" attributes="0"/>
+                      <Component id="fishToggleButton" min="-2" pref="197" max="-2" attributes="0"/>
+                      <Component id="meatToggleButton" min="-2" pref="197" max="-2" attributes="0"/>
+                      <Component id="vegToggleButton" alignment="0" min="-2" pref="197" max="-2" attributes="0"/>
+                      <Component id="resetButton" min="-2" pref="197" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="timeLabel" pref="63" max="32767" attributes="0"/>
+                          <Component id="timeLabel" min="-2" pref="49" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="timeText" max="32767" attributes="0"/>
-                              <Component id="timeSlider" pref="65" max="32767" attributes="0"/>
+                              <Component id="timeText" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
+                              <Component id="timeSlider" pref="68" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="priceLabel" pref="63" max="32767" attributes="0"/>
+                          <Component id="priceLabel" min="-2" pref="49" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="priceText" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="priceText" min="-2" pref="63" max="-2" attributes="0"/>
                               <Component id="priceSlider" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="14" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="easyDifficultyButton" alignment="3" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="mediumDifficultyButton" alignment="3" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="hardDifficultyButton" alignment="3" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="easyDifficultyButton" alignment="3" pref="120" max="32767" attributes="0"/>
+                              <Component id="mediumDifficultyButton" alignment="3" pref="120" max="32767" attributes="0"/>
+                              <Component id="hardDifficultyButton" alignment="3" pref="120" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="swedenKitchenButton" max="32767" attributes="0"/>
+                              <Component id="greeceKitchenButton" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="swedenKitchenButton" min="-2" pref="161" max="-2" attributes="0"/>
-                                      <Component id="greeceKitchenButton" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="indiaKitchenButton" alignment="0" pref="161" max="32767" attributes="0"/>
-                                          <Component id="asiaKitchenButton" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="africaKitchenButton" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="franceKitchenButton" pref="161" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="franceKitchenButton" min="-2" pref="161" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="indiaKitchenButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="asiaKitchenButton" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="africaKitchenButton" pref="161" max="32767" attributes="0"/>
+                                  <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="jScrollPane1" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jScrollPane1" max="32767" attributes="0"/>
                   </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Component id="filler1" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -424,6 +413,12 @@
             <Property name="text" type="java.lang.String" value="Enkelt"/>
             <Property name="toolTipText" type="java.lang.String" value="M&#xe5;ltider som &#xe4;r enkla att g&#xf6;ra"/>
             <Property name="actionCommand" type="java.lang.String" value="L&#xe4;tt"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="null"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="null"/>
+            </Property>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
               <ComponentRef name="mediumDifficultyButton"/>
             </Property>
