@@ -1,5 +1,6 @@
 package recipesearch;
 
+import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -33,7 +34,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         initComponents();
         ImageIcon frameIcon = new ImageIcon(
         getClass().getResource("/RecipeSearch/resources/img.png"));
-    
+        this.getContentPane().setBackground(Color.white);
         setIconImage(frameIcon.getImage());
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -47,8 +48,9 @@ public class RecipeSearchView extends javax.swing.JFrame {
         });
 
         fetchAndDisplayResults();
+        
+        meatToggleButton.requestFocusInWindow();    
         this.requestFocus();
-        meatToggleButton.requestFocusInWindow();        
     }
 
     //Osäker på om vi vill skapa filter i viewern, eller om vi ska delegera det till RecipeSeachController. (View har all info, men ska ju egentligen inte göra den typen av beräkningar kan jag tycka)
@@ -527,7 +529,9 @@ public class RecipeSearchView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(layoutPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(layoutPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
