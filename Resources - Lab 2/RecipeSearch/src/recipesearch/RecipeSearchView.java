@@ -9,7 +9,9 @@ import java.util.List;
 import javax.swing.ButtonModel;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
+import javax.swing.InputVerifier;
 import javax.swing.JList;
+import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import se.chalmers.ait.dat215.lab2.Recipe;
 import se.chalmers.ait.dat215.lab2.SearchFilter;
@@ -45,14 +47,12 @@ public class RecipeSearchView extends javax.swing.JFrame {
         });
 
         fetchAndDisplayResults();
-        //this.pack();
-        //this.setResizable(false);
+        this.requestFocus();
+        meatToggleButton.requestFocusInWindow();        
     }
 
     //Osäker på om vi vill skapa filter i viewern, eller om vi ska delegera det till RecipeSeachController. (View har all info, men ska ju egentligen inte göra den typen av beräkningar kan jag tycka)
-    private SearchFilter createFilter(){
-        return new SearchFilter(getDifficulty(), getMaxTime(), getCuisine(), getMaxPrice(), getMainIngredient());
-    }
+
 
     private String getMainIngredient(){
         ButtonModel tempButton = mainIngrGroup.getSelection();
@@ -98,7 +98,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
     
     //Om vi lägger till en funktion för att söka på namn så behöver vi bara skapa en overloaded metod med samma man som tar in en sträng också, alternativ ett annat custom filter.
     private void fetchAndDisplayResults(){
-        List<Recipe> results = search.getResults(createFilter());
+        List<Recipe> results = search.getResults(getDifficulty(), getMaxTime(), getCuisine(), getMaxPrice(), getMainIngredient());
         displayResults(results);
     }
     
@@ -159,6 +159,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         setName("applicationFrame"); // NOI18N
 
         layoutPanel.setBackground(new java.awt.Color(255, 255, 255));
+        layoutPanel.setFocusTraversalPolicyProvider(true);
         layoutPanel.setMaximumSize(null);
 
         mainIngrGroup.add(meatToggleButton);
@@ -166,6 +167,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         meatToggleButton.setToolTipText("Kött");
         meatToggleButton.setActionCommand("Kött");
         meatToggleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        meatToggleButton.setNextFocusableComponent(fishToggleButton);
         meatToggleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mainIngrAction(evt);
@@ -177,6 +179,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         fishToggleButton.setToolTipText("Fisk");
         fishToggleButton.setActionCommand("Fisk");
         fishToggleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        fishToggleButton.setNextFocusableComponent(chickenToggleButton);
         fishToggleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mainIngrAction(evt);
@@ -188,6 +191,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         chickenToggleButton.setToolTipText("Kyckling");
         chickenToggleButton.setActionCommand("Kyckling");
         chickenToggleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        chickenToggleButton.setNextFocusableComponent(vegToggleButton);
         chickenToggleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mainIngrAction(evt);
@@ -199,6 +203,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         vegToggleButton.setToolTipText("Vegitariskt");
         vegToggleButton.setActionCommand("Vegetarisk");
         vegToggleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        vegToggleButton.setNextFocusableComponent(timeText);
         vegToggleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mainIngrAction(evt);
@@ -238,10 +243,15 @@ public class RecipeSearchView extends javax.swing.JFrame {
 
         priceText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         priceText.setText("Allt");
-        priceText.setInputVerifier(new integerInputVerifier());
+        priceText.setNextFocusableComponent(easyDifficultyButton);
         priceText.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 priceTextFocusLost(evt);
+            }
+        });
+        priceText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                priceTextKeyPressed(evt);
             }
         });
 
@@ -249,6 +259,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         easyDifficultyButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         easyDifficultyButton.setText("Enkelt");
         easyDifficultyButton.setActionCommand("Lätt");
+        easyDifficultyButton.setNextFocusableComponent(mediumDifficultyButton);
         easyDifficultyButton.setPreferredSize(new java.awt.Dimension(216, 160));
         easyDifficultyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,6 +271,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         swedenKitchenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/sweden_flag_map2.png"))); // NOI18N
         swedenKitchenButton.setToolTipText("Svensk mat");
         swedenKitchenButton.setActionCommand("Sverige");
+        swedenKitchenButton.setNextFocusableComponent(franceKitchenButton);
         swedenKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
         swedenKitchenButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,6 +283,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         hardDifficultyButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         hardDifficultyButton.setText("Svårt");
         hardDifficultyButton.setActionCommand("Svår");
+        hardDifficultyButton.setNextFocusableComponent(swedenKitchenButton);
         hardDifficultyButton.setPreferredSize(new java.awt.Dimension(216, 160));
         hardDifficultyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,6 +295,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         franceKitchenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/france2.png"))); // NOI18N
         franceKitchenButton.setToolTipText("Fransk mat");
         franceKitchenButton.setActionCommand("Frankrike");
+        franceKitchenButton.setNextFocusableComponent(greeceKitchenButton);
         franceKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
         franceKitchenButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,6 +307,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         greeceKitchenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recipesearch/resources/greece2.png"))); // NOI18N
         greeceKitchenButton.setToolTipText("Grekisk mat");
         greeceKitchenButton.setActionCommand("Grekland");
+        greeceKitchenButton.setNextFocusableComponent(africaKitchenButton);
         greeceKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
         greeceKitchenButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,6 +320,8 @@ public class RecipeSearchView extends javax.swing.JFrame {
         africaKitchenButton.setText("jToggleButton2");
         africaKitchenButton.setToolTipText("Afrikansk mat");
         africaKitchenButton.setActionCommand("Afrika");
+        africaKitchenButton.setNextFocusableComponent(indiaKitchenButton);
+        africaKitchenButton.setOpaque(true);
         africaKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
         africaKitchenButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -317,6 +334,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         indiaKitchenButton.setText("jToggleButton2");
         indiaKitchenButton.setToolTipText("Insisk mat");
         indiaKitchenButton.setActionCommand("Indien");
+        indiaKitchenButton.setNextFocusableComponent(asiaKitchenButton);
         indiaKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
         indiaKitchenButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,6 +347,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         asiaKitchenButton.setText("jToggleButton2");
         asiaKitchenButton.setToolTipText("Asiatisk mat");
         asiaKitchenButton.setActionCommand("Asien");
+        asiaKitchenButton.setNextFocusableComponent(resultList);
         asiaKitchenButton.setPreferredSize(new java.awt.Dimension(216, 160));
         asiaKitchenButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,10 +357,15 @@ public class RecipeSearchView extends javax.swing.JFrame {
 
         timeText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         timeText.setText("Allt");
-        timeText.setInputVerifier(new integerInputVerifier());
+        timeText.setNextFocusableComponent(priceText);
         timeText.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 timeTextFocusLost(evt);
+            }
+        });
+        timeText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                timeTextKeyPressed(evt);
             }
         });
 
@@ -349,6 +373,7 @@ public class RecipeSearchView extends javax.swing.JFrame {
         mediumDifficultyButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         mediumDifficultyButton.setText("Medelsvårt");
         mediumDifficultyButton.setActionCommand("Mellan");
+        mediumDifficultyButton.setNextFocusableComponent(hardDifficultyButton);
         mediumDifficultyButton.setPreferredSize(new java.awt.Dimension(216, 160));
         mediumDifficultyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -364,6 +389,12 @@ public class RecipeSearchView extends javax.swing.JFrame {
         resultList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         resultList.setToolTipText("");
         resultList.setMaximumSize(new java.awt.Dimension(490, 934));
+        resultList.setNextFocusableComponent(resetButton);
+        resultList.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                resultListKeyPressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(resultList);
 
         resetButton.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
@@ -524,7 +555,14 @@ public class RecipeSearchView extends javax.swing.JFrame {
     }//GEN-LAST:event_difficultyAction
 
     private void timeTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_timeTextFocusLost
-        timeSlider.setValue(Integer.parseInt(timeText.getText()));
+        if(integerInputVerifier.verify(timeText)){
+            timeSlider.setValue(Integer.parseInt(timeText.getText()));
+        } else if(timeSlider.getValue() == 0){
+            timeText.setText("Allt");
+        } else {
+            timeText.setText(String.valueOf(timeSlider.getValue()));
+        }
+    
     }//GEN-LAST:event_timeTextFocusLost
 
     private void cusineAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cusineAction
@@ -537,7 +575,14 @@ public class RecipeSearchView extends javax.swing.JFrame {
     }//GEN-LAST:event_cusineAction
 
     private void priceTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_priceTextFocusLost
-        priceSlider.setValue(Integer.parseInt(priceText.getText()));
+        if(integerInputVerifier.verify(priceText)){
+            priceSlider.setValue(Integer.parseInt(priceText.getText()));
+        } else if (priceSlider.getValue() == 0){
+            priceText.setText("Allt");
+        } else {
+            priceText.setText(String.valueOf(priceSlider.getValue()));
+        }
+    
     }//GEN-LAST:event_priceTextFocusLost
 
     private void priceSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_priceSliderStateChanged
@@ -562,6 +607,38 @@ public class RecipeSearchView extends javax.swing.JFrame {
         } else prevMainIngr = (JToggleButton)evt.getSource();
         fetchAndDisplayResults();
     }//GEN-LAST:event_mainIngrAction
+
+    private void timeTextKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_timeTextKeyPressed
+        if (evt.getKeyCode() == evt.VK_ENTER){
+            if(integerInputVerifier.verify(timeText)){
+                timeSlider.setValue(Integer.parseInt(timeText.getText()));
+            } else if(timeSlider.getValue() == 0){
+                timeText.setText("Allt");
+            } else {
+                timeText.setText(String.valueOf(timeSlider.getValue()));
+            }
+            ((JTextField)evt.getComponent()).transferFocus();
+        }
+    }//GEN-LAST:event_timeTextKeyPressed
+
+    private void priceTextKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_priceTextKeyPressed
+        if (evt.getKeyCode() == evt.VK_ENTER){
+            if(integerInputVerifier.verify(priceText)){
+                priceSlider.setValue(Integer.parseInt(priceText.getText()));
+            } else if (priceSlider.getValue() == 0){
+                priceText.setText("Allt");
+            } else {
+                priceText.setText(String.valueOf(priceSlider.getValue()));
+            }
+            ((JTextField)evt.getComponent()).transferFocus();
+        }
+    }//GEN-LAST:event_priceTextKeyPressed
+
+    private void resultListKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_resultListKeyPressed
+        if (evt.getKeyCode() == evt.VK_ENTER){
+            new SingleRecipeView((Recipe)((JList)evt.getComponent()).getSelectedValue());
+        }
+    }//GEN-LAST:event_resultListKeyPressed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -598,4 +675,5 @@ public class RecipeSearchView extends javax.swing.JFrame {
     private Recipe[] lastResult;
     private DefaultListModel listModel = new DefaultListModel();
     private JToggleButton prevMainIngr, prevDifficulty, prevCuisine;
+    private InputVerifier integerInputVerifier = new integerInputVerifier();
 }

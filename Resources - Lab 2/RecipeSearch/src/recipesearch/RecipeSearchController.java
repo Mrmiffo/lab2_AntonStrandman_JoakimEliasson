@@ -22,7 +22,10 @@ public class RecipeSearchController{
        
     }
     
-    public List<Recipe> getResults(SearchFilter filter){
+
+    
+    public List<Recipe> getResults(String difficulty, int maxTime, String cuisine, int maxPrice, String mainIngredient){
+        SearchFilter filter = createFilter(difficulty,maxTime,cuisine, maxPrice, mainIngredient);
         List<Recipe> temp = db.search(filter);
         List<Recipe> result = new ArrayList<Recipe>();
         for (Recipe r: temp){
@@ -33,5 +36,8 @@ public class RecipeSearchController{
             }
         }
         return result;
+    }
+    private SearchFilter createFilter(String difficulty, int maxTime, String cuisine, int maxPrice, String mainIngredient){
+        return new SearchFilter( difficulty,  maxTime,  cuisine,  maxPrice, mainIngredient);
     }
 }
